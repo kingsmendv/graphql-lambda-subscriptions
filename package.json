@@ -2,6 +2,7 @@
   "name": "graphql-lambda-subscriptions",
   "version": "0.0.0-development",
   "description": "Graphql-WS compatible Lambda Powered Subscriptions",
+  "type": "module",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
   "exports": {

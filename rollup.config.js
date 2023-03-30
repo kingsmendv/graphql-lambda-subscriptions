@@ -8,8 +8,8 @@ export default {
     }),
   ],
   output: [
-    // { format: 'esm', file: './dist/index-esm.mjs' },
-    { format: 'cjs', file: './dist/index.js' },
+    { format: 'esm', file: './dist/index-esm.mjs' },
+    // { format: 'cjs', file: './dist/index.js' },
   ],
   external: [
     // peer deps
