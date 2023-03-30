@@ -116,13 +116,7 @@ const setupSubscription: MessageHandler<SubscribeMessage> = async ({ server, eve
   server.log('subscribe:putSubscription', subscription)
   try {
     await server.models.subscription.put(subscription, {
-      ConditionExpression: '#id <> :id',
-      ExpressionAttributeNames: {
-        '#id': 'id',
-      },
-      ExpressionAttributeValues: {
-        ':id': subscriptionId,
-      },
+      ConditionExpression: `attribute_not_exists(${server.models.subscription.custom?.primaryKey || 'id'})`,
     })
   } catch (error) {
     if (error.code === 'ConditionalCheckFailedException') {

@@ -1,5 +1,6 @@
 import { ServerArgs, ServerClosure } from './types'
-import { DDB } from './ddb/DDB'
+// import { DDB } from './ddb/DDB'
+import { DDB } from './ddb/KdvDDB'
 import { log as debugLogger } from './utils/logger'
 
 export const buildServerClosure = async (opts: ServerArgs): Promise<ServerClosure> => {

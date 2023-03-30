@@ -80,8 +80,8 @@ export type MaybePromise<T> = T | Promise<T>
 export type ServerClosure = {
   dynamodb: DynamoDB
   models: {
-    subscription: DDBClient<Subscription, { id: string }>
-    connection: DDBClient<Connection, {id: string }>
+    subscription: DDBClient<Subscription, { id: string }> & { custom?: Record<string, string> }
+    connection: DDBClient<Connection, {id: string }> & { custom?: Record<string, string> }
   }
   log: LoggerFunction
   apiGatewayManagementApi?: ApiGatewayManagementApiSubset
